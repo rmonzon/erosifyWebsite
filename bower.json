@@ -1,0 +1,21 @@
+{
+  "name": "erosifyWebsite",
+  "homepage": "www.erosify.com",
+  "authors": [
+    "Raul Rivero <raul@inceptures.com>"
+  ],
+  "description": "Website for erosify.com",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
