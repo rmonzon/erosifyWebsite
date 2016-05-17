@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -20,6 +21,131 @@
 
 </head>
 <body>
+    <header>
+        <img src="images/logo-green.png">
 
+        <div class="menu-container">
+            <div class="top-links-box selected">
+                <a href="#">Features</a>
+            </div>
+            <div class="top-links-box">
+                <a href="#">Special Offer</a>
+            </div>
+            <div class="top-links-box">
+                <a href="#">Testimonials</a>
+            </div>
+            <div class="top-links-box">
+                <a href="#">Download</a>
+            </div>
+        </div>
+
+        <button class="glyphicon glyphicon-menu-hamburger"></button>
+    </header>
+
+    <div class="col-md-12 slider-section">
+        <div class="col-md-5">
+            <div class="phone-container animated slideInUp">
+
+            </div>
+        </div>
+        <div class="col-md-7" style="padding-top: 260px;padding-right: 10%;">
+            <h1 class="animated slideInRight">Your perfect match!</h1>
+            <p class="animated slideInRight">Play our popular Encounters game and get matched with other users. It’s a great way to break the ice and chat to new people.</p>
+
+            <div class="button-download">Download the App now</div>
+        </div>
+
+        <div class="circles-container">
+            <div id="0" class="pink-circle selected"></div>
+            <div id="1" class="pink-circle"></div>
+            <div id="2" class="pink-circle"></div>
+            <div id="3" class="pink-circle"></div>
+        </div>
+    </div>
+
+    <div class="col-md-12 features-section">
+        <label class="feature-title">Features</label>
+        <p class="about-us">
+            At Erosify, we are combining the online social and dating experience into one single piece, a mobile app. Erosify uses matchmaking
+            algorithms and machine learning to identify potential matches between its users, here are our main features.
+        </p>
+
+        <div style="padding: 20px 10%">
+            <div class="col-md-4">
+                <img src="images/people%20nearby.png" width="80%">
+                <label class="feature-title-desc">People nearby</label>
+                <p>Discover the people around you, the people you'd like to know more about.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/people%20nearby.png" width="80%">
+                <label class="feature-title-desc">Messages</label>
+                <p>Send private messages to whoever you want, no matter if there's a match or not.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/people%20nearby.png" width="80%">
+                <label class="feature-title-desc">Erosify Events™</label>
+                <p>For those who are looking for things to do around, or the ones who enjoy moving masses.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 offer-section">
+        <label class="offer-title">Special Offer</label>
+        <p class="offer-desc">
+            Enter your email address to join the selected list of privileged people who will receive Erosify Premium™ accounts when we launch
+            the app. It's a gift from us for being a pioneer in this journey.
+        </p>
+
+        <div class="alert alert-success" id="success-alert" role="alert">
+            <b>Congratulations!</b> You have been successfully registered as an Erosify Premium™ user.
+            You will receive a confirmation email shortly.
+        </div>
+
+        <form id="signup-users-form">
+            <input id='email' class="material-input material-input-black" type="email" name="email" placeholder="Enter you email" required>
+            <br />
+            <button class="send-email-btn">Redeem Offer</button>
+        </form>
+    </div>
+
+    <div class="col-md-12 features-section">
+        <label class="testimonials-title">Testimonials</label>
+        <p class="about-us">
+            At Erosify, we are combining the online social and dating experience into one single piece, a mobile app. Erosify uses matchmaking
+            algorithms and machine learning to identify potential matches between its users, here are our main features.
+        </p>
+    </div>
+
+    <div class="col-md-12 download-section">
+        <img src="images/logo.png">
+        <p class="offer-desc">
+            Enter your email address to join the selected list of privileged people who will receive Erosify Premium™ accounts when we launch
+            the app. It's a gift from us for being a pioneer in this journey.
+        </p>
+
+        <div style="display: flex;position: absolute;left: 50%;margin-left: -290px;top: 60%;">
+            <div class="stores-links apple">
+                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
+            </div>
+            <div class="stores-links google">
+                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="col-md-12">
+        <div class="social-container">
+            <div class="social-button facebook-btn">
+                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
+            </div>
+            <div class="social-button twitter-btn">
+                <a href="https://twitter.com/erosifyapp" target="_blank"></a>
+            </div>
+            <div class="social-button linkedin-btn">
+                <a href="https://www.linkedin.com/company/erosify" target="_blank"></a>
+            </div>
+        </div>
+        <p class="trademark">&copy; 2016 Erosify, Inc. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,13 +1,370 @@
 @font-face {
     font-family: LeituraSansGrot;
-    src: url("fonts/LeituraSans-Grot%201.otf") format("opentype");
+    src: url("../fonts/LeituraSans-Grot%201.otf") format("opentype");
 }
 
 @font-face {
     font-family: LeituraSansBold;
-    src: url("fonts/LeituraSans-Grot%204.otf") format("opentype");
+    src: url("../fonts/LeituraSans-Grot%204.otf") format("opentype");
 }
 
 html, body {
     font-family: LeituraSansGrot;
+}
+
+header {
+    background: black;
+    width: 100%;
+    height: 70px;
+    padding: 10px 10px 0;
+    display: flex;
+}
+
+header a {
+    color: white;
+    font-size: 20px;
+    margin: 0 25px;
+    display: flex;
+    letter-spacing: 2px;
+    transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+    color: #61BCB3;
+    text-decoration: none;
+}
+
+header div.selected a {
+    color: #61BCB3;
+}
+
+.menu-container {
+    display: flex;
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+.top-links-box {
+    height: 50px;
+}
+
+.top-links-box.selected {
+    border-bottom: 5px solid #61BCB3;
+}
+
+.glyphicon-menu-hamburger {
+    display: none;
+}
+
+header img {
+    width: 160px;
+    height: 45px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.slider-section {
+    background: url("../images/bg-1.jpeg") no-repeat 50%;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+.circles-container {
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    display: flex;
+    bottom: 15px;
+}
+
+.pink-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #EC7D90;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.pink-circle.selected {
+    background: #EC7D90;
+}
+
+.button-download {
+    text-transform: uppercase;
+    color: white;
+    width: 65%;
+    height: 70px;
+    background: #EC7D90;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-family: LeituraSansBold;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    top: 600px;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: LeituraSansBold;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.slider-section .col-md-7 p {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.button-download:hover {
+    background: #ec687b;
+}
+
+.button-download:active {
+    background: #ec485c;
+}
+
+.phone-container {
+    width: 350px;
+    height: 660px;
+    background: url("../images/layout-iPhone.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 60px;
+    left: 20%;
+}
+
+.features-section {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.feature-title {
+    font-size: 60px;
+    color: #61BCB3;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.testimonials-title {
+    font-size: 60px;
+    color: #EC7D90;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.offer-title {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.features-section p.about-us {
+    font-size: 26px;
+    padding: 0 15%;
+    color: black;
+}
+
+.features-section p {
+    font-size: 26px;
+    color: darkgray;
+}
+
+.feature-title-desc {
+    color: #61BCB3;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: LeituraSansBold;
+    letter-spacing: 3px;
+}
+
+.offer-section {
+    width: 100%;
+    height: 580px;
+    background: url("../images/offer-bg.jpg") no-repeat 50%;
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 90, 82, 0.71);
+}
+
+.download-section {
+    width: 100%;
+    height: 500px;
+    background: url("../images/download-bg.jpg") no-repeat 50% 80%;
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: inset 0 0 0 1000px rgba(255, 97, 124, 0.51);
+}
+
+p.offer-desc {
+    font-size: 26px;
+    padding: 0 15%;
+    color: white;
+}
+
+.material-input {
+    width: 40%;
+    background: transparent;
+    color: white;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid white;
+    font-weight: 100;
+    font-size: 22px;
+}
+
+.material-input-black {
+    width: 40%;
+    background: transparent;
+    color: white;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid white;
+    font-weight: 100;
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 75px;
+}
+
+.material-input-black:focus {
+    outline: none;
+    border-bottom: 1px solid #51C2BE;
+}
+
+.material-input-black::-webkit-input-placeholder {
+    color: white;
+}
+
+.material-input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: ghostwhite;
+}
+:-moz-placeholder {
+    color: ghostwhite;
+}
+
+::-moz-placeholder {
+    color: ghostwhite;
+}
+
+:-ms-input-placeholder {
+    color: ghostwhite;
+}
+
+.send-email-btn {
+    width: 25%;
+    height: 60px;
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    font-size: 23px;
+    padding-top: 8px;
+    margin-top: 45px;
+}
+
+#signup-users-form {
+    margin-top: 60px;
+}
+
+.alert {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    display: none;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    color: white;
+    background: #161616;
+    text-align: center;
+    font-size: 25px;
+}
+
+.social-button {
+    width: 70px;
+    height: 70px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.facebook-btn {
+    background: url("../images/fb-icon.png") no-repeat;
+    background-size: contain;
+}
+
+.twitter-btn {
+    background: url("../images/twitter-icon.png") no-repeat;
+    background-size: contain;
+}
+
+.linkedin-btn {
+    background: url("../images/linkedin-icon.png") no-repeat;
+    background-size: contain;
+}
+
+.social-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    margin-left: -225px;
+}
+
+.trademark {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -204px;
+}
+
+.stores-links {
+    margin: 20px;
+    width: 250px;
+    height: 80px;
+    cursor: pointer;
+}
+.apple {
+    background: url("../images/app-store.png") no-repeat;
+    background-size: contain;
+}
+.google {
+    background: url("../images/goog-play.png") no-repeat;
+    background-size: contain;
+    width: 257px;
+    height: 75px;
+}
+
+@media only screen and (max-device-width: 736px) {
+    .menu-container {
+        display: none;
+    }
+    .glyphicon-menu-hamburger {
+        display: block;
+        font-size: 30px;
+        color: lightgray;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
 }
