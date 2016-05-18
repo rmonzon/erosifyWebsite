@@ -355,6 +355,43 @@ footer {
     height: 75px;
 }
 
+.pink-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: #F4647F;
+    color: #ECECEC;
+    padding: 60px 30px 20px 30px;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.pink-box label {
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-size: 30px;
+    font-family: 'Parisienne', cursive;
+}
+
+.pink-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+
+
+
+
+
+
 @media only screen and (max-device-width: 736px) {
     .menu-container {
         display: none;
