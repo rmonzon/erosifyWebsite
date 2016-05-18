@@ -4,6 +4,89 @@
 
 jQuery(function($) {
 
+    var appScreens = ["images/matching-screen.png", "images/messages-screen.png", "images/score-screen.png", "images/matching-screen.png"];
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $(".back-to-top").fadeIn();
+        } else {
+            $(".back-to-top").fadeOut();
+        }
+
+        if ($(this).scrollTop() < 800) {
+            setSelectedClass(0);
+        }
+        if ($(this).scrollTop() >= 800 && $(this).scrollTop() < 1596) {
+            setSelectedClass(1);
+        }
+        if ($(this).scrollTop() >= 1596 && $(this).scrollTop() < 2177) {
+            setSelectedClass(2);
+        }
+        if ($(this).scrollTop() >= 2177 && $(this).scrollTop() < 2400) {
+            setSelectedClass(3);
+        }
+        if ($(this).scrollTop() >= 2400) {
+            setSelectedClass(4);
+        }
+    });
+
+    $('#dLabel').click(function() {
+        if ($('.submenu').hasClass('show-menu')) {
+            $('.submenu').addClass('hide-menu');
+            $('.submenu').removeClass('show-menu');
+        }
+        else {
+            $('.submenu').removeClass('hide-menu');
+            $('.submenu').addClass('show-menu');
+        }
+    });
+
+    $('.button-download').click(function () {
+        $('html, body').animate({scrollTop: document.body.scrollHeight}, 'slow', function () { });
+    });
+
+    $('.back-to-top').on("click",function() {
+        $('html, body').animate({scrollTop: 0}, 'slow', function () { });
+    });
+
+    //menu
+    $('#home').click(function () {
+        $('html, body').animate({scrollTop: 0}, 'slow', function () { });
+    });
+
+    $('a#features').click(function () {
+        $('html, body').animate({scrollTop: 800}, 'slow', function () { });
+        setSelectedClass(1);
+    });
+
+    $('a#offer').click(function () {
+        $('html, body').animate({scrollTop: 1596}, 'slow', function () { });
+        setSelectedClass(2);
+    });
+
+    $('a#testimonials').click(function () {
+        $('html, body').animate({scrollTop: 2177}, 'slow', function () { });
+        setSelectedClass(3);
+    });
+
+    $('a#download').click(function () {
+        $('html, body').animate({scrollTop: document.body.scrollHeight}, 'slow', function () { });
+        setSelectedClass(4);
+    });
+
+    function setSelectedClass(item) {
+        $('.submenu').addClass('hide-menu');
+        $('.submenu').removeClass('show-menu');
+        for (var i = 1; i <= 4; i++) {
+            if (i == item) {
+                $('#menu' + i).addClass('selected');
+            }
+            else {
+                $('#menu' + i).removeClass('selected');
+            }
+        }
+    }
+    
     var descriptions = [
         {
             title: "Your perfect match!",
@@ -29,6 +112,7 @@ jQuery(function($) {
             for (var i = 0, len = buttons.length; i < len; ++i) {
                 $(buttons[i]).click(function (ev) {
                     changeBtnClass(ev.target.id);
+                    $('.phone-container img').attr("src", appScreens[parseInt(ev.target.id)]);
                     document.querySelector('.slider-section h1').innerHTML = descriptions[parseInt(ev.target.id)].title;
                     document.querySelector('.slider-section p').innerHTML = descriptions[parseInt(ev.target.id)].desc;
                 });
@@ -58,7 +142,7 @@ jQuery(function($) {
 
     $('#signup-users-form').submit(function(event) {
         event.preventDefault();
-        //postNewsletterToGoogle();
+        postNewsletterToGoogle();
         $('.send-email-btn').prop('disabled', true);
     });
 
@@ -73,10 +157,10 @@ jQuery(function($) {
 
         if ((email !== "") && (validateEmail(email))) {
             $.ajax({
-                url: "https://docs.google.com/forms/d/1M1KgYRFy4JeSG7ieHvuqIOJIBfdFXKTvdloLh62R3X4/formResponse",
-                data: {"entry.1436677092": email},
+                url: "http://erosify-server.herokuapp.com/api/v1/addsubscriber",
+                data: {"email": email, "ip": myip},
                 type: "POST",
-                dataType: "xml",
+                dataType: "JSON",
                 statusCode: {
                     0: function () {
                         $('#email').val("");

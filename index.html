@@ -19,38 +19,55 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
+
     <script src="js/main.js"></script>
 
 </head>
 <body>
     <header>
-        <img src="images/logo-green.png">
+        <img src="images/logo-green.png" id="home">
 
         <div class="menu-container">
-            <div class="top-links-box selected">
-                <a href="#">Features</a>
+            <div id="menu1" class="top-links-box">
+                <a id="features" href="#">Features</a>
             </div>
-            <div class="top-links-box">
-                <a href="#">Special Offer</a>
+            <div id="menu2" class="top-links-box">
+                <a id="offer" href="#">Special Offer</a>
             </div>
-            <div class="top-links-box">
-                <a href="#">Testimonials</a>
+            <div id="menu3" class="top-links-box">
+                <a id="testimonials" href="#">Testimonials</a>
             </div>
-            <div class="top-links-box">
-                <a href="#">Download</a>
+            <div id="menu4" class="top-links-box">
+                <a id="download" href="#">Download</a>
             </div>
         </div>
 
-        <button class="glyphicon glyphicon-menu-hamburger"></button>
+        <button id="dLabel" class="glyphicon glyphicon-menu-hamburger"></button>
+
+        <div class="submenu">
+            <div id="menu1" class="top-links-box">
+                <a id="features" href="#">Features</a>
+            </div>
+            <div id="menu2" class="top-links-box">
+                <a id="offer" href="#">Special Offer</a>
+            </div>
+            <div id="menu3" class="top-links-box">
+                <a id="testimonials" href="#">Testimonials</a>
+            </div>
+            <div id="menu4" class="top-links-box">
+                <a id="download" href="#">Download</a>
+            </div>
+        </div>
     </header>
 
     <div class="col-md-12 slider-section">
         <div class="col-md-5">
             <div class="phone-container animated slideInUp">
-
+                <img src="images/matching-screen.png">
             </div>
         </div>
-        <div class="col-md-7" style="padding-top: 260px;padding-right: 10%;">
+        <div id="desc-screens" class="col-md-7" style="padding-top: 260px;padding-right: 10%;">
             <h1 class="animated slideInRight">Your perfect match!</h1>
             <p class="animated slideInRight">Play our popular Encounters game and get matched with other users. It’s a great way to break the ice and chat to new people.</p>
 
@@ -73,20 +90,37 @@
         </p>
 
         <div style="padding: 20px 10%">
-            <div class="col-md-4">
-                <img src="images/people%20nearby.png" width="80%">
+            <div class="col-md-3">
+                <div class="pink-container">
+                    <img src="images/peoplenearby.png" width="45%">
+                </div>
+                <br />
                 <label class="feature-title-desc">People nearby</label>
                 <p>Discover the people around you, the people you'd like to know more about.</p>
             </div>
-            <div class="col-md-4">
-                <img src="images/people%20nearby.png" width="80%">
+            <div class="col-md-3">
+                <div class="pink-container">
+                    <img src="images/Messages.png" style="width: 65%;margin-top: 13px;">
+                </div>
+                <br />
                 <label class="feature-title-desc">Messages</label>
                 <p>Send private messages to whoever you want, no matter if there's a match or not.</p>
             </div>
-            <div class="col-md-4">
-                <img src="images/people%20nearby.png" width="80%">
+            <div class="col-md-3">
+                <div class="pink-container">
+                    <img src="images/Events.png" style="width: 55%;margin-top: 10px;">
+                </div>
+                <br />
                 <label class="feature-title-desc">Erosify Events™</label>
                 <p>For those who are looking for things to do around, or the ones who enjoy moving masses.</p>
+            </div>
+            <div class="col-md-3">
+                <div class="pink-container">
+                    <img src="images/Verified%20Profiles%20.png" style="width: 60%;margin-top: 18px;">
+                </div>
+                <br />
+                <label class="feature-title-desc">Verified Profiles</label>
+                <p>This is a big problem among other dating apps out there, so we take serious care of it.</p>
             </div>
         </div>
     </div>
@@ -113,8 +147,8 @@
     <div class="col-md-12 features-section">
         <label class="testimonials-title">Testimonials</label>
         <p class="about-us">
-            At Erosify, we are combining the online social and dating experience into one single piece, a mobile app. Erosify uses matchmaking
-            algorithms and machine learning to identify potential matches between its users, here are our main features.
+            Erosify is free and always will be. The complete basic usage is free of charge. Premium features are the lowest price guaranteed.
+            Find out what some of our first users think about the app.
         </p>
 
         <div class="col-md-12" style="padding: 0 5%;">
@@ -154,33 +188,40 @@
     <div class="col-md-12 download-section">
         <img src="images/logo.png">
         <p class="offer-desc">
-            Enter your email address to join the selected list of privileged people who will receive Erosify Premium™ accounts when we launch
-            the app. It's a gift from us for being a pioneer in this journey.
+            Erosify is already the world’s largest and fastest growing social network for meeting new people as proven by the millions who have
+            joined and the hundreds of thousands who sign up daily.
         </p>
 
-        <div style="display: flex;position: absolute;left: 50%;margin-left: -290px;top: 60%;">
-            <div class="stores-links apple">
-                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
-            </div>
-            <div class="stores-links google">
-                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
-            </div>
+        <div class="stores-links-container">
+            <a href="https://www.facebook.com/erosify/" target="_blank">
+                <div class="stores-links apple"></div>
+            </a>
+
+            <a href="https://www.facebook.com/erosify/" target="_blank">
+                <div class="stores-links google"></div>
+            </a>
         </div>
     </div>
 
     <footer class="col-md-12">
         <div class="social-container">
-            <div class="social-button facebook-btn">
-                <a href="https://www.facebook.com/erosify/" target="_blank"></a>
-            </div>
-            <div class="social-button twitter-btn">
-                <a href="https://twitter.com/erosifyapp" target="_blank"></a>
-            </div>
-            <div class="social-button linkedin-btn">
-                <a href="https://www.linkedin.com/company/erosify" target="_blank"></a>
-            </div>
+            <a href="https://www.facebook.com/erosify/" target="_blank">
+                <div class="social-button facebook-btn"></div>
+            </a>
+
+            <a href="https://twitter.com/erosifyapp" target="_blank">
+                <div class="social-button twitter-btn"></div>
+            </a>
+
+            <a href="https://www.linkedin.com/company/erosify" target="_blank">
+                <div class="social-button linkedin-btn"></div>
+            </a>
         </div>
         <p class="trademark">&copy; 2016 Erosify, Inc. All rights reserved.</p>
     </footer>
+
+    <a class="back-to-top">
+        <i class="glyphicon glyphicon-chevron-up" style="margin: 15px 19px;color: white"></i>
+    </a>
 </body>
 </html>
