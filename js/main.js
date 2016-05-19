@@ -90,7 +90,7 @@ jQuery(function($) {
     var descriptions = [
         {
             title: "Your perfect match!",
-            desc: "Play our popular Encounters game and get matched with other users. It’s a great way to break the ice and chat to new people."
+            desc: "Our powerful matchmaking algorithm calculates potential matches for you, depending on different criteria. It allows you to reach new people around that you might end up getting well along with."
         },
         {
             title: "Open messages",
@@ -144,6 +144,7 @@ jQuery(function($) {
         event.preventDefault();
         postNewsletterToGoogle();
         $('.send-email-btn').prop('disabled', true);
+        $('#email').prop('disabled', true);
     });
 
     // form validation
@@ -166,6 +167,7 @@ jQuery(function($) {
                         $('#email').val("");
                         $('#success-alert').show();
                         $('.send-email-btn').prop('disabled', false);
+                        $('#email').prop('disabled', false);
                         setTimeout(function () {
                             $('#success-alert').hide();
                         }, 4000);
@@ -174,6 +176,7 @@ jQuery(function($) {
                         $('#email').val("");
                         $('#success-alert').show();
                         $('.send-email-btn').prop('disabled', false);
+                        $('#email').prop('disabled', false);
                         setTimeout(function () {
                             $('#success-alert').hide();
                         }, 4000);
