@@ -5,6 +5,7 @@
 jQuery(function($) {
 
     var appScreens = ["images/matching-screen.png", "images/messages-screen.png", "images/score-screen.png", "images/matching-screen.png"];
+    var indexScreen = 0;
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -86,7 +87,7 @@ jQuery(function($) {
             }
         }
     }
-    
+
     var descriptions = [
         {
             title: "Your perfect match!",
@@ -108,17 +109,49 @@ jQuery(function($) {
 
     (function () {
         if (document.querySelector('.circles-container')) {
+            setTimeout(function () {
+                document.querySelector('.slider-section h1').className = '';
+                document.querySelector('.slider-section p').className = '';
+            }, 1000);
+
             var buttons = document.querySelector('.circles-container').children;
             for (var i = 0, len = buttons.length; i < len; ++i) {
                 $(buttons[i]).click(function (ev) {
-                    changeBtnClass(ev.target.id);
-                    $('.phone-container img').attr("src", appScreens[parseInt(ev.target.id)]);
-                    document.querySelector('.slider-section h1').innerHTML = descriptions[parseInt(ev.target.id)].title;
-                    document.querySelector('.slider-section p').innerHTML = descriptions[parseInt(ev.target.id)].desc;
+                    indexScreen = parseInt(ev.target.id);
+                    changeSlide(indexScreen);
                 });
             }
         }
     }());
+
+    (function () {
+        if (document.querySelector('.arrow-right')) {
+            $('.arrow-right').click(function () {
+                indexScreen++;
+                if (indexScreen == 4) {
+                    indexScreen = 0;
+                }
+                changeSlide(indexScreen);
+            });
+        }
+        if (document.querySelector('.arrow-left')) {
+            $('.arrow-left').click(function () {
+                indexScreen--;
+                if (indexScreen < 0) {
+                    indexScreen = 3;
+                }
+                changeSlide(indexScreen);
+
+            });
+        }
+    }());
+
+    function changeSlide(index) {
+        changeBtnClass(index);
+        $('.phone-container img').attr("src", appScreens[index]);
+        document.querySelector('.slider-section h1').innerHTML = descriptions[index].title;
+        document.querySelector('.slider-section p').innerHTML = descriptions[index].desc;
+    }
 
     function changeBtnClass(id) {
         if (document.querySelector('.circles-container')) {

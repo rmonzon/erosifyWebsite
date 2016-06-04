@@ -355,13 +355,15 @@ footer {
 }
 .apple {
     background: url("../images/app-store.png") no-repeat;
-    background-size: contain;
+    background-size: 93%;
+    background-position: 50% 35%;
 }
 .google {
     background: url("../images/goog-play.png") no-repeat;
-    background-size: contain;
     width: 257px;
     height: 75px;
+    background-size: 100%;
+    background-position: 50%;
 }
 
 .pink-box {
@@ -435,7 +437,35 @@ footer {
     display: none;
 }
 
+.arrow-left {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    cursor: pointer;
+    background: url("../images/left-arrow.png") no-repeat;
+    background-size: contain;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
 
+.arrow-right {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    cursor: pointer;
+    background: url("../images/right-arrow.png") no-repeat;
+    background-size: contain;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
+
+.arrow-right:active, .arrow-left:active {
+    opacity: 0.5;
+}
 
 @media only screen and (max-device-width: 736px) {
     .menu-container {
