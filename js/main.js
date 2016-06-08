@@ -175,6 +175,7 @@ jQuery(function($) {
 
     $('#signup-users-form').submit(function(event) {
         event.preventDefault();
+        $('#loadingRequest').show();
         postNewsletterToGoogle();
         $('.send-email-btn').prop('disabled', true);
         $('#email').prop('disabled', true);
@@ -198,6 +199,7 @@ jQuery(function($) {
                 statusCode: {
                     0: function () {
                         $('#email').val("");
+                        $('#loadingRequest').hide();
                         $('#success-alert').show();
                         $('.send-email-btn').prop('disabled', false);
                         $('#email').prop('disabled', false);
@@ -207,6 +209,7 @@ jQuery(function($) {
                     },
                     200: function () {
                         $('#email').val("");
+                        $('#loadingRequest').hide();
                         $('#success-alert').show();
                         $('.send-email-btn').prop('disabled', false);
                         $('#email').prop('disabled', false);

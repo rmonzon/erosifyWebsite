@@ -246,7 +246,13 @@ p.offer-desc {
     font-weight: 100;
     font-size: 22px;
     margin-bottom: 15px;
-    margin-top: 75px;
+    margin-top: 35px;
+}
+
+#loadingRequest {
+    font-size: 18px;
+    color: orange;
+    display: none;
 }
 
 .material-input-black:focus {
@@ -288,6 +294,11 @@ p.offer-desc {
     font-size: 23px;
     padding-top: 8px;
     margin-top: 45px;
+}
+
+.send-email-btn:active {
+    border: 1px solid gray;
+    color: gray;
 }
 
 #signup-users-form {

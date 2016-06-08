@@ -132,7 +132,9 @@
 </div>
 
 <div class="col-md-12 offer-section">
-    <label class="offer-title">Special Offer</label>
+    <a name="specialoffer" aria-label="Anchor link for: pagination">
+        <label class="offer-title">Special Offer</label>
+    </a>
     <p class="offer-desc">
         Enter your email address to join the selected list of privileged people who will receive Erosify Premium™ accounts when we launch
         the app. It's a gift from us for being a pioneer in this journey.
@@ -144,6 +146,10 @@
     </div>
 
     <form id="signup-users-form">
+        <div class="text-center" id="loadingRequest">
+            <p>Processing your request...</p>
+        </div>
+
         <input id='email' class="material-input material-input-black" type="email" name="email" placeholder="Enter you email" required>
         <br />
         <button class="send-email-btn">Redeem Offer</button>
